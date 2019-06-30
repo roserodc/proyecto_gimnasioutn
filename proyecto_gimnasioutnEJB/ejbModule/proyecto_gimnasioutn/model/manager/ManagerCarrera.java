@@ -31,5 +31,32 @@ public class ManagerCarrera {
     	Query q = en.createQuery(consulta,Carrera.class);
     	return q.getResultList();
     }
+    
+    public Carrera findCarreraById(int id_ca) {
+    	return en.find(Carrera.class, id_ca);
+    }
+    
+    public void insertarCarrera(Carrera carrera) throws Exception{
+    	if(findCarreraById(carrera.getCaId())!= null)
+    		throw new Exception("Ya existe la carrera indicada");
+    	en.persist(carrera);
+    }
+    
+    public void eliminarCarrera(int id_ca) {
+    	Carrera carrera =findCarreraById(id_ca);
+    	if	(carrera!=null)
+    		en.remove(carrera);
+    }
+    
+    public void actualizarCarrera(Carrera carrera) throws Exception {
+    	Carrera ca = findCarreraById(carrera.getCaId());
+    	if(ca==null)
+    		throw new Exception("No existe la carrera con el Id especificada");
+    	ca.setCaDescripcion(carrera.getCaDescripcion());
+    	ca.setCaAcronimo(carrera.getCaAcronimo());
+    	ca.setFIdFacultad(carrera.getFIdFacultad());
+    	en.merge(ca);
+    }
+
 
 }
