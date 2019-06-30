@@ -1,17 +1,23 @@
 package proyecto_gimnasioutnWeb.controller;
 
-import java.io.Serializable;
-import java.util.List;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
-//import proyecto_gimnasioutn.controller.JSFUtil;
 import proyecto_gimnasioutn.model.entities.Facultad;
 import proyecto_gimnasioutn.model.manager.ManagerFacultad;
 
+import java.io.Serializable;
+import java.util.List;
+
+@Named
+@SessionScoped
 public class BeanFacultad implements Serializable {
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	@EJB
 	private ManagerFacultad managerFacultad;
