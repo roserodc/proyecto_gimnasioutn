@@ -67,8 +67,14 @@
 				<h:outputText value="Acronimo" />
 				<p:inputText value="#{beanCarrera.carrera.caAcronimo}" />
 
-				<h:outputText value="Facultad" />
-				<p:inputText value="#{beanCarrera.carrera.FIdFacultad}" />
+<!-- 				<h:outputText value="Facultad" /> -->
+<!-- 				<p:inputText value="#{beanCarrera.carrera.FIdFacultad}" /> -->
+
+				<p:selectOneMenu value="#{beanCarrera.carrera.FIdFacultad}" >                                                
+                            <f:selectItem noSelectionOption="true" itemLabel="Seleccione Facultad" itemValue="#{null}"/>
+                            <f:selectItems value="#{beanFacultad.listaFacultades}" var="facu" itemLabel="#{facu.FDescripcion}" itemValue="#{facu.FId.toString()}"/>
+                </p:selectOneMenu>                                            
+				
 
 				<p:commandButton value="Insertar" icon="fa fa-save"
 					update="@form,:form2"
@@ -95,6 +101,7 @@
 				</p:column>
 				<p:column headerText="Facultad">
 					<h:outputText value="#{carrera.FIdFacultad}" />
+<!-- 						<h:outputText value="#{fac.FDescripcion}" /> -->
 				</p:column>
 
 				<p:column headerText="OPCIONES" priority="1">
