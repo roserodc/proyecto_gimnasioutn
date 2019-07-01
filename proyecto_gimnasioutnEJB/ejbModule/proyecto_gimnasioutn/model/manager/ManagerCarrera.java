@@ -27,7 +27,7 @@ public class ManagerCarrera {
     }
     
     public List<Carrera> findAllCarreras(){
-    	String consulta = "select o from Carrera o";
+    	String consulta = "select o from Carrera o order by ca_id";
     	Query q = en.createQuery(consulta,Carrera.class);
     	return q.getResultList();
     }
