@@ -8,5 +8,6 @@
 		<class>proyecto_gimnasioutn.model.entities.Usuario</class>
 		<class>proyecto_gimnasioutn.model.entities.Estado</class>
 		<class>proyecto_gimnasioutn.model.entities.Rol</class>
+		<class>proyecto_gimnasioutn.model.entities.TipoPeticion</class>
 	</persistence-unit>
 </persistence>
