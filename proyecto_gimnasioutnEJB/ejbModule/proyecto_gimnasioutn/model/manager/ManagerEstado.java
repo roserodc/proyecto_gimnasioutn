@@ -26,7 +26,7 @@ public class ManagerEstado {
     }
     
     public List<Estado> findAllEstado(){
-    	String consulta="select o from Estado o";
+    	String consulta="select o from Estado o order by o.estId";
     	Query q=em.createQuery(consulta, Estado.class);
     	return q.getResultList();
     }
