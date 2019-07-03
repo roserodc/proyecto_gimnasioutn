@@ -6,5 +6,7 @@
 		<class>proyecto_gimnasioutn.model.entities.Carrera</class>
 		<class>proyecto_gimnasioutn.model.entities.Club</class>
 		<class>proyecto_gimnasioutn.model.entities.Usuario</class>
+		<class>proyecto_gimnasioutn.model.entities.Estado</class>
+		<class>proyecto_gimnasioutn.model.entities.Rol</class>
 	</persistence-unit>
 </persistence>
