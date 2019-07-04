@@ -3,7 +3,7 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      	xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<f:facet name="first">
@@ -31,13 +31,16 @@
 				<p:menuitem value="Clubes" onclick="location.href='indexClub.xhtml'"
 					icon="pi pi-list" />
 				<p:menuitem value="Usuarios"
-					onclick="location.href='indexUsuarios.xhtml'" icon="pi pi-user" />
+					onclick="location.href='indexUsuario.xhtml'" icon="pi pi-users" />
 				<p:menuitem value="Estados"
-					onclick="location.href='indexEstados.xhtml'" icon="pi pi-user" />
+					onclick="location.href='indexEstados.xhtml'" icon="pi pi-sort-down" />
 				<p:menuitem value="Roles"
 					onclick="location.href='indexRoles.xhtml'" icon="pi pi-user" />
 				<p:menuitem value="Tipos de Petición"
-					onclick="location.href='indexTipoPeticion.xhtml'" icon="pi pi-user" />
+					onclick="location.href='indexTipoPeticion.xhtml'" icon="pi pi-file" />
+				<p:menuitem value="Niveles"
+					onclick="location.href='indexNivel.xhtml'" icon="pi pi-align-justify" />
+				
 			</p:submenu>
 			<p:submenu label="Usuario">
 				<p:menuitem value="Registro" action="#{menuView.delete}"
