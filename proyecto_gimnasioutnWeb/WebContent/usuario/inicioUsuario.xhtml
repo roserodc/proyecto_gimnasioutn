@@ -13,6 +13,29 @@
 	</f:facet>
 </h:head>
 <body>
+	<h:form>
+		<p:growl>
+			<p:autoUpdate />
+		</p:growl>
+		<p:panel style="background-color:#3B73B9;">
+			<table style="width: 1300px;" bgcolor="">
+				<tr>
+					<th><img src="../imagenes/logoUTN.jpg" width="150"
+						height="140" /></th>
+					<th><h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE"
+							style="font-weight:bold; font-size:20pt" /> <br /> <h:outputText
+							value="GIMNASIO" style="font-weight:bold; font-size:20pt" /></th>
+					<th><img src="../imagenes/logoUTN.jpg" width="150"
+						height="140" /></th>
+				</tr>
+			</table>
+		</p:panel>
+	</h:form>
+	<p:growl>
+		<p:autoUpdate />
+	</p:growl>
+
+
 	<script type="text/javascript">    
     PrimeFaces.locales['de'] = {
         closeText: 'Schließen',
@@ -42,97 +65,97 @@
     };
 </script>
 
-	<style type="text/css">
+
+	<h:form id="form">
+		<style type="text/css">
 .value {
 	font-weight: bold;
 }
 </style>
-	<h:form id="form">
-		<h1>Vista Inicio para usuario</h1>
+
+		<h4>Vista Inicio para usuario</h4>
 		<p:growl id="msgs" showDetail="true" />
 
 		<p:tabView>
 			<p:tab title="Peticiones">
 				<h:outputText
 					value="Realizar una nueva peticion - Complete los campos solicitados" />
-				<h:panelGrid columns="2" cellpadding="10">
+				<center>
+					<h:panelGrid columns="2" cellpadding="10">
+						<h:form id="formCalendar">
+							<p:growl id="msgs" showDetail="true" />
+							<h:panelGrid columns="2" cellpadding="5">
+								<p:outputLabel for="inline" value="Inline:" />
+								<p:calendar id="inline" value="#{calendarView.date1}"
+									mode="inline" />
+							</h:panelGrid>
+							<!-- 						<p:commandButton value="Submit" update="msgs" -->
+							<!-- 							action="#{calendarView.click}" icon="pi pi-check" /> -->
+							<p:dialog modal="true" resizable="false" header="Values"
+								widgetVar="dlg" showEffect="fold">
+								<p:panelGrid id="display" columns="2"
+									columnClasses="label,value">
+									<h:outputText value="Inline:" />
+									<h:outputText value="#{calendarView.date1}">
+										<f:convertDateTime pattern="MM/dd/yyyy" />
+									</h:outputText>
+								</p:panelGrid>
+							</p:dialog>
+						</h:form>
+						<h:form id="formCampos">
+							<p:growl id="msgs" showDetail="true" />
 
+							<h:panelGrid columns="2" cellpadding="5">
 
-					<h:form id="formCalendar">
-						<p:growl id="msgs" showDetail="true" />
+								<p:outputLabel for="button" value="Fecha:" />
+								<p:calendar id="button" value="#{calendarView.date3}"
+									showOn="button" />
 
-						<h:panelGrid columns="2" cellpadding="5">
-							<p:outputLabel for="inline" value="Inline:" />
-							<p:calendar id="inline" value="#{calendarView.date1}"
-								mode="inline" />
-						</h:panelGrid>
+								<p:outputLabel for="time" value="Hora Inicio:" />
+								<p:calendar id="time" value="#{calendarView.date11}"
+									pattern="HH:mm" timeOnly="true" />
 
-						<!-- 						<p:commandButton value="Submit" update="msgs" -->
-						<!-- 							action="#{calendarView.click}" icon="pi pi-check" /> -->
+								<p:outputLabel for="time1" value="Hora Fin:" />
+								<p:calendar id="time1" value="#{calendarView.date12}"
+									pattern="HH:mm" timeOnly="true" />
 
-						<p:dialog modal="true" resizable="false" header="Values"
-							widgetVar="dlg" showEffect="fold">
+								<h:outputText value="Guia de entrenamiento" />
+								<p:inputText
+									value="#{beanPeticiones.peticion.geIdGuiaEntrenamiento}" />
+							</h:panelGrid>
 
-							<p:panelGrid id="display" columns="2" columnClasses="label,value">
-								<h:outputText value="Inline:" />
-								<h:outputText value="#{calendarView.date1}">
-									<f:convertDateTime pattern="MM/dd/yyyy" />
-								</h:outputText>
+							<p:commandButton value="Submit" update="msgs"
+								action="#{calendarView.click}" icon="pi pi-check" />
 
-							</p:panelGrid>
-						</p:dialog>
-					</h:form>
+							<p:dialog modal="true" resizable="false" header="Values"
+								widgetVar="dlg" showEffect="fold">
+								<p:panelGrid id="display" columns="2"
+									columnClasses="label,value">
 
+									<h:outputText value="Fecha:" />
+									<h:outputText value="#{calendarView.date3}">
+										<f:convertDateTime pattern="MM/dd/yyyy" />
+									</h:outputText>
 
-					<h:form id="formCampos">
-						<p:growl id="msgs" showDetail="true" />
+									<h:outputText value="Hora Inicio:" />
+									<h:outputText value="#{calendarView.date11}">
+										<f:convertDateTime pattern="HH:mm" />
+									</h:outputText>
 
-						<h:panelGrid columns="2" cellpadding="5">
+									<h:outputText value="Hora Fin:" />
+									<h:outputText value="#{calendarView.date12}">
+										<f:convertDateTime pattern="HH:mm" />
+									</h:outputText>
 
-							<p:outputLabel for="button" value="Fecha:" />
-							<p:calendar id="button" value="#{calendarView.date3}"
-								showOn="button" />
-
-							<p:outputLabel for="time" value="Hora Inicio:" />
-							<p:calendar id="time" value="#{calendarView.date11}"
-								pattern="HH:mm" timeOnly="true" />
-
-							<p:outputLabel for="time1" value="Hora Fin:" />
-							<p:calendar id="time1" value="#{calendarView.date12}"
-								pattern="HH:mm" timeOnly="true" />
-						</h:panelGrid>
-
-						<p:commandButton value="Submit" update="msgs"
-							action="#{calendarView.click}" icon="pi pi-check" />
-
-						<p:dialog modal="true" resizable="false" header="Values"
-							widgetVar="dlg" showEffect="fold">
-							<p:panelGrid id="display" columns="2" columnClasses="label,value">
-
-								<h:outputText value="Fecha:" />
-								<h:outputText value="#{calendarView.date3}">
-									<f:convertDateTime pattern="MM/dd/yyyy" />
-								</h:outputText>
-
-								<h:outputText value="Hora Inicio:" />
-								<h:outputText value="#{calendarView.date11}">
-									<f:convertDateTime pattern="HH:mm" />
-								</h:outputText>
-
-								<h:outputText value="Hora Fin:" />
-								<h:outputText value="#{calendarView.date12}">
-									<f:convertDateTime pattern="HH:mm" />
-								</h:outputText>
-
-							</p:panelGrid>
-						</p:dialog>
-					</h:form>
-				</h:panelGrid>
+								</p:panelGrid>
+							</p:dialog>
+						</h:form>
+					</h:panelGrid>
+				</center>
 			</p:tab>
 			<p:tab title="Lista Peticiones">
 				<h:panelGrid columns="2" cellpadding="10">
-					<h:outputText
-						value="Lista de Peticiones Realizadas" />
+					<h:outputText value="Lista de Peticiones Realizadas" />
 				</h:panelGrid>
 				<h:form id="form2">
 					<p:panel header="Datos de Peticiones">
@@ -180,35 +203,18 @@
 								<h:outputText value="#{peticion.geIdGuiaEntrenamiento}" />
 							</p:column>
 
-<!-- 							<p:column headerText="OPCIONES" priority="1"> -->
-<!-- 								<p:commandButton icon="fa fa-edit" title="Editar" -->
-<!-- 									actionListener="#{beanPeticiones.actionListenerSelecionarPeticion(peticion)}" -->
-<!-- 									update="formEdicion" oncomplete="PF('dlgEdicion').show();"> -->
-<!-- 								</p:commandButton> -->
-
-<!-- 								<p:commandButton icon="fa fa-close" title="eliminar" -->
-<!-- 									update="@form" -->
-<!-- 									actionListener="#{beanPeticiones.actionListenerElminarPeticion(peticion.ptcId)}"> -->
-<!-- 									<p:confirm header="Confirmacion" message="Desea Elminar?" -->
-<!-- 										icon="fa fa-exclamation-triangle"></p:confirm> -->
-<!-- 								</p:commandButton> -->
-
-<!-- 							</p:column> -->
-
 						</p:dataTable>
 					</p:panel>
 				</h:form>
 
 			</p:tab>
-			<!--         <p:tab title="Godfather Part III"> -->
-			<!--             <h:panelGrid columns="2" cellpadding="10"> -->
-			<!--                 <h:outputText value="After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family.  -->
-			<!--                     Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate." /> -->
-			<!--             </h:panelGrid> -->
-			<!--         </p:tab> -->
+
 		</p:tabView>
 
 	</h:form>
+
+	<br />
+
 
 </body>
 </html>

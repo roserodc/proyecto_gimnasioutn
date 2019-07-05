@@ -9,7 +9,7 @@
 	<f:facet name="first">
 		<meta name="viewport"
 			content="widtd=device-widtg, initial-sacale=1, shrink-to-fit=no, user-scalable=no" />
-		<title>Manejo de Datos Usuario</title>
+		<title>Login Usuario</title>
 	</f:facet>
 </h:head>
 
@@ -55,41 +55,19 @@ display: inline-block;
 			<p:messages>
 				<p:autoUpdate />
 			</p:messages>
-			<h:panelGroup layout="block" style="width: 900px;">
+			<h:panelGroup layout="block" style="width:500px;">
 				<p:panel styleClass="panelStyle">
 
 					<p:panel>
 						<f:facet name="header">
-						<h:outputLabel value="REGISTRO" />						
+<!-- 						<h:outputLabel value="Iniciar Sesión" />						 -->
 						</f:facet>
-						<!-- 				<p:panelGrid columns="2"> -->
-						<div style="width: 50%; float: left;">
-
-							<div><p:inputText value="#{beanUsuario.usuario.userId}"	placeholder="Id" /></div><br/>
+							<div><img src="../imagenes/iconUser.png" width="120" height="110" /></div>
 							<div><p:inputText value="#{beanUsuario.usuario.userCi}" placeholder="Cédula" /></div><br/>
 							<div><p:inputText value="#{beanUsuario.usuario.userPass}" placeholder="Contraseña" /></div><br/>
-							<div><p:inputText value="#{beanUsuario.usuario.userApellido}" placeholder="Apellido" />	</div><br/>
-							<div><p:inputText value="#{beanUsuario.usuario.userNombre}"	placeholder="Nombre" />	</div>
-						</div>
-
-						<div><p:inputText value="#{beanUsuario.usuario.userTelefono}" placeholder="Telefono" /></div><br/>
-						<div><p:selectOneMenu value="#{beanUsuario.usuario.caIdCarrera}"  style="width: 190px; height: 35px;">
-								<f:selectItem noSelectionOption="true"
-									itemLabel="Seleccione Carrera" itemValue="#{null}" />
-								<f:selectItems value="#{beanCarrera.listaCarreras}"
-									var="carrera" itemLabel="#{carrera.caDescripcion}"
-									itemValue="#{carrera.caId.toString()}" />
-							</p:selectOneMenu></div><br/>
-						<div><p:selectOneMenu value="#{beanUsuario.usuario.cluIdClub}" style="width: 190px; height: 35px;">
-								<f:selectItem noSelectionOption="true"
-									itemLabel="Seleccione Club" itemValue="#{null}" />
-								<f:selectItems value="#{beanClub.listaClubes}" var="club"
-									itemLabel="#{club.cluDescripcion}"
-									itemValue="#{club.cluId.toString()}" />
-							</p:selectOneMenu></div><br/>
-						<div><p:inputText value="#{beanUsuario.usuario.RIdRoles}" placeholder="Rol" hidden="hidden" /></div><br/>
-						<div><p:commandButton value="GUARDAR" action="#{beanUsuario.actionListenerInsertarUsuario()}" 
-						style="width: 190px; " ></p:commandButton></div>
+							<div><p:commandButton value="Login" action="#" 
+						style="width: 190px; " ></p:commandButton></div>			
+	
 					</p:panel>
 
 				</p:panel>

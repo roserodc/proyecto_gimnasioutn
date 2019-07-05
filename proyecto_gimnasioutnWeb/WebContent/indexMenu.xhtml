@@ -19,7 +19,7 @@
 			<p:autoUpdate />
 		</p:growl>
 		<p:panel style="background-color:#3B73B9;">
-			<table width="1865" bgcolor="#6CE1D8">
+			<table width="1865" bgcolor="">
 				<tr>
 					<th>
 						<img src="imagenes/logoUTN.jpg" width="150" height="140" />
@@ -122,7 +122,7 @@
 				<p:menuitem value="Planes" url="#" icon="pi pi-angle-double-right" />
 				<p:menuitem value="Rutinas" url="#" icon="pi pi-angle-double-right" />
 			</p:submenu>
-			<p:menuitem value="Usuario" url="Usuario/inicioUsuario.xhtml"
+			<p:menuitem value="Usuario" url="usuario/loginUsuario.xhtml"
 				icon="pi pi-user" />
 			<p:menuitem value="Quit" url="#" icon="pi pi-times" />
 		</p:menubar>
@@ -148,7 +148,7 @@
 						<p:commandButton value="Registrarse" onclick="location.href='usuario/registro.xhtml'" 
 							style="width:700px; height:100px; font-size:50px" />
 						<br /> <br /> <br />
-						<p:commandButton value="Iniciar Sesión" action="#"
+						<p:commandButton value="Iniciar Sesión" onclick="location.href='usuario/loginUsuario.xhtml'" 
 							style="width:700px; height:100px; font-size:50px" />
 					</div>
 				</p:panel>
@@ -170,7 +170,7 @@
 				<div align="center">
 					<h1>Contactenos:</h1>
 				</div>
-				<table border="1px" width="1865" bgcolor="#BD9C42">
+				<table border="1px" width="1700" >
 					<tr>
 						<th>Nombres</th>
 						<th>Correo</th>
