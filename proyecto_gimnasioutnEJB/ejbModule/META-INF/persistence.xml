@@ -10,5 +10,6 @@
 		<class>proyecto_gimnasioutn.model.entities.Rol</class>
 		<class>proyecto_gimnasioutn.model.entities.TipoPeticion</class>
 		<class>proyecto_gimnasioutn.model.entities.Nivel</class>
+		<class>proyecto_gimnasioutn.model.entities.Peticione</class>
 	</persistence-unit>
 </persistence>

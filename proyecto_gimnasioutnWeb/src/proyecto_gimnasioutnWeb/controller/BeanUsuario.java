@@ -38,7 +38,8 @@ public class BeanUsuario implements Serializable {
 		panelColapsado=!panelColapsado;
 	}
 	
-	public void actionListenerInsertarUsuario() {
+	public String actionListenerInsertarUsuario() {
+//		public void actionListenerInsertarUsuario() {	
 		try {
 			managerUsuario.insertarUsuario(usuario);
 			listaUsuarios=managerUsuario.findAllUsuarios();
@@ -48,7 +49,7 @@ public class BeanUsuario implements Serializable {
 			JSFUtil.createMensajeError(e.getMessage());
 			e.printStackTrace();
 		}
-			
+		 return "inicioUsuario.xhtml";
 	}
 	
 	public void actionListenerElminarUsuario(int id_usuario) {
