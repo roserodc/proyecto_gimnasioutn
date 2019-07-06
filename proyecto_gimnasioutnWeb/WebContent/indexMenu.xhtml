@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta name="viewport"
+			content="widtd=device-widtg, initial-sacale=1, shrink-to-fit=no, user-scalable=no" />
+		<title>Gimnasio UTN</title>
+	</f:facet>
+</h:head>
+<body>
+
+	<h:form>
+		<p:growl>
+			<p:autoUpdate />
+		</p:growl>
+		<p:panel>
+				<p:dataTable reflow="true">
+				<p:column width="150">
+					<f:facet name="header">
+						<img src="imagenes/logoUTN.jpg" width="150" height="140" />
+					</f:facet>
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE"
+							style="font-weight:bold; font-size:20pt" />
+						<br />
+						<h:outputText value="GIMNASIO"
+							style="font-weight:bold; font-size:20pt" />
+					</f:facet>
+				</p:column>
+				<p:column width="150">
+					<f:facet name="header">
+						<img src="imagenes/logoUTN.jpg" width="150" height="140" />
+					</f:facet>
+				</p:column>
+			</p:dataTable>
+			<!-- 			<f:facet name="header"> -->
+			<!-- 				<div align="left"> -->
+			<!-- 					<img src="imagenes/logoUTN.jpg" width="150" height="110" /> -->
+			<!-- 				</div> -->
+			<!-- 				<div align="center"> -->
+			<!-- 					<h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE" -->
+			<!-- 						style="font-weight:bold; font-size:20pt" /> -->
+			<!-- 					<br /> -->
+			<!-- 					<h:outputText value="GIMNASIO" -->
+			<!-- 						style="font-weight:bold; font-size:20pt" /> -->
+			<!-- 				</div> -->
+			<!-- 				<div align="right"> -->
+			<!-- 					<img src="imagenes/logoUTN.jpg" width="150" height="110" /> -->
+			<!-- 				</div> -->
+			<!-- 			</f:facet> -->
+			<!-- 			<div align="center"> -->
+			<!-- 				<h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE" -->
+			<!-- 					style="font-weight:bold; font-size:20pt" /> -->
+			<!-- 				<br /> -->
+			<!-- 				<h:outputText value="GIMNASIO" -->
+			<!-- 					style="font-weight:bold; font-size:20pt" /> -->
+			<!-- 			</div> -->
+			<!-- 			<div align="right"> -->
+			<!-- 				<img src="imagenes/logoUTN.jpg" width="150" height="110" /> -->
+			<!-- 			</div> -->
+		</p:panel>
+	</h:form>
+	<p:growl>
+		<p:autoUpdate />
+	</p:growl>
+	<h:form>
+		<p:growl>
+			<p:autoUpdate />
+		</p:growl>
+		<p:menubar>
+			<p:submenu label="UTN" icon="fa fa-table">
+				<p:menuitem value="Facultades" url="indexFacultad.xhtml"
+					icon="pi pi-folder" />
+				<p:menuitem value="Carreras" url="indexCarrera.xhtml"
+					icon="pi pi-folder-open" />
+				<p:menuitem value="Niveles" url="indexNivel.xhtml"
+					icon="fa fa-list-ol" />
+			</p:submenu>
+			<p:submenu label="Clubs" icon="fa fa-th-list">
+				<p:menuitem value="Clubs" url="indexClub.xhtml"
+					icon="fa fa-list-alt" />
+			</p:submenu>
+			<p:submenu label="Usuarios" icon="pi pi-users">
+				<p:menuitem value="Registros" url="indexUsuario.xhtml"
+					icon="fa fa-users" />
+				<p:menuitem value="Roles Usuario" url="indexRoles.xhtml"
+					icon="fa fa-user-secret" />
+			</p:submenu>
+			<p:submenu label="Peticiones" icon="fa fa-envelope">
+				<p:menuitem value="Peticiones" url="indexPeticiones.xhtml"
+					icon="pi pi-list" />
+				<p:menuitem value="Tipos Peticion" url="indexTipoPeticion.xhtml"
+					icon="pi pi-file" />
+			</p:submenu>
+			<p:submenu label="Planes" icon="pi pi-pencil">
+				<p:menuitem value="Guia Entrenamiento" url="#"
+					icon="pi pi-angle-double-left" />
+				<p:menuitem value="Planes" url="#" icon="pi pi-angle-double-right" />
+				<p:menuitem value="Rutinas" url="#" icon="pi pi-angle-double-right" />
+			</p:submenu>
+			<p:menuitem value="Usuario" url="Usuario/inicioUsuario.xhtml"
+				icon="pi pi-user" />
+			<p:menuitem value="Quit" url="#" icon="pi pi-times" />
+		</p:menubar>
+	</h:form>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="62" cellspacing="20">
+			<h:form id="publicidad">
+				<p:panel style="border:rgb(128,128,128) 3px solid;margin:0 auto;">
+					<p:panelGrid>
+						<f:facet name="header">
+							<div align="center">
+								<img src="imagenes/gim1.jpg" width="500" height="300" />
+								<h1>Esta es la pagina de reservaciones de uso del gimnasio de la
+									UTN</h1>
+							</div>
+						</f:facet>
+					</p:panelGrid>
+				</p:panel>
+			</h:form>
+			<h:form id="inicio-secion">
+				<p:panel style="border:rgb(128,128,128) 3px solid;">
+					<div align="center">
+						<p:commandButton value="Registrarse" action="#"
+							style="width:700px; height:100px; font-size:50px" />
+						<br /> <br /> <br />
+						<p:commandButton value="Iniciar Seción" action="#"
+							style="width:700px; height:100px; font-size:50px" />
+					</div>
+				</p:panel>
+			</h:form>
+		</h:panelGrid>
+		<f:facet name="fount">
+			<p:panel style="border:rgb(128,128,128) 3px solid;">
+				<div align="center">
+					<p:commandButton value="Registrarse" action="#"
+						style="width:700px; height:100px; font-size:50px" />
+					<p:commandButton value="Iniciar Seción" action="#"
+						style="width:700px; height:100px; font-size:50px" />
+				</div>
+			</p:panel>
+		</f:facet>
+		<h:form id="pie-pagina">
+			<p:panel style="border:rgb(128,128,128) 3px solid;background-color:#F7B00B;color:blue;">
+				<div align="center">
+					<h1>Contactenos:</h1>
+				</div>
+				<table>
+					<tr>
+						<th>Nombres</th>
+						<th>Correo</th>
+						<th>Telefono</th>
+					</tr>
+					<tr>
+						<td>Diana Rosero</td>
+						<td>rcroseror@utn.edu.ec</td>
+					</tr>
+					<tr>
+						<td>Tommy Mancero</td>
+						<td>tbmancerom@utn.edu.ec</td>
+					</tr>
+					<tr>
+						<td>Diana Rosero</td>
+						<td>rcroseror@utn.edu.ec</td>
+					</tr>
+					<tr>
+						<td>Diana Rosero</td>
+						<td>rcroseror@utn.edu.ec</td>
+					</tr>
+					<p:column>
+						<h1>Nombres</h1>
+						<h:outputText value="Diana Rosero" />
+						<br/>
+						<h:outputText value="Tommy Mancero" />
+						<br/>
+						<h:outputText value="Stalyn Tua" />
+						<br/>
+						<h:outputText value="Abraham Vallejos" />
+					</p:column>
+					<p:column>
+						<h1>Correo</h1>
+						<h:outputText value="dcroseror@utn.edu.ec" />
+						<br/>
+						<h:outputText value="tbmancerom@utn.edu.ec" />
+						<br/>
+						<h:outputText value="wstuas@utn.edu.ec" />
+						<br/>
+						<h:outputText value="ajvallejosm@utn.edu.ec" />
+					</p:column>
+				</table>
+			</p:panel>
+		</h:form>
+	</h:form>
+</body>
+</html>
