@@ -12,34 +12,51 @@
 		<title>Gimnasio UTN</title>
 	</f:facet>
 </h:head>
-<body>
+<body bgcolor="red">
 
 	<h:form>
 		<p:growl>
 			<p:autoUpdate />
 		</p:growl>
-		<p:panel>
-				<p:dataTable reflow="true">
-				<p:column width="150">
-					<f:facet name="header">
+		<p:panel style="background-color:#3B73B9;">
+			<table width="1865" bgcolor="#6CE1D8">
+				<tr>
+					<th>
 						<img src="imagenes/logoUTN.jpg" width="150" height="140" />
-					</f:facet>
-				</p:column>
-				<p:column>
-					<f:facet name="header">
+					</th>
+					<th>
 						<h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE"
 							style="font-weight:bold; font-size:20pt" />
 						<br />
 						<h:outputText value="GIMNASIO"
 							style="font-weight:bold; font-size:20pt" />
-					</f:facet>
-				</p:column>
-				<p:column width="150">
-					<f:facet name="header">
+					</th>
+					<th>
 						<img src="imagenes/logoUTN.jpg" width="150" height="140" />
-					</f:facet>
-				</p:column>
-			</p:dataTable>
+					</th>
+				</tr>
+			</table>
+<!-- 			<p:dataTable reflow="true"> -->
+<!-- 				<p:column width="150"> -->
+<!-- 					<f:facet name="header"> -->
+<!-- 						<img src="imagenes/logoUTN.jpg" width="150" height="140" /> -->
+<!-- 					</f:facet> -->
+<!-- 				</p:column> -->
+<!-- 				<p:column> -->
+<!-- 					<f:facet name="header"> -->
+<!-- 						<h:outputText value="UNIVERSIDAD TÉCNICA DEL NORTE" -->
+<!-- 							style="font-weight:bold; font-size:20pt" /> -->
+<!-- 						<br /> -->
+<!-- 						<h:outputText value="GIMNASIO" -->
+<!-- 							style="font-weight:bold; font-size:20pt" /> -->
+<!-- 					</f:facet> -->
+<!-- 				</p:column> -->
+<!-- 				<p:column width="150"> -->
+<!-- 					<f:facet name="header"> -->
+<!-- 						<img src="imagenes/logoUTN.jpg" width="150" height="140" /> -->
+<!-- 					</f:facet> -->
+<!-- 				</p:column> -->
+<!-- 			</p:dataTable> -->
 			<!-- 			<f:facet name="header"> -->
 			<!-- 				<div align="left"> -->
 			<!-- 					<img src="imagenes/logoUTN.jpg" width="150" height="110" /> -->
@@ -111,15 +128,15 @@
 		</p:menubar>
 	</h:form>
 	<h:form>
-		<h:panelGrid columns="2" cellpadding="62" cellspacing="20">
-			<h:form id="publicidad">
+		<h:panelGrid columns="2" cellpadding="50" cellspacing="0">
+			<h:form id="publicidad" style="background-color:red">
 				<p:panel style="border:rgb(128,128,128) 3px solid;margin:0 auto;">
 					<p:panelGrid>
 						<f:facet name="header">
 							<div align="center">
 								<img src="imagenes/gim1.jpg" width="500" height="300" />
-								<h1>Esta es la pagina de reservaciones de uso del gimnasio de la
-									UTN</h1>
+								<h1>Esta es la pagina de reservaciones de uso del gimnasio
+									de la UTN</h1>
 							</div>
 						</f:facet>
 					</p:panelGrid>
@@ -128,31 +145,32 @@
 			<h:form id="inicio-secion">
 				<p:panel style="border:rgb(128,128,128) 3px solid;">
 					<div align="center">
-						<p:commandButton value="Registrarse" action="#"
+						<p:commandButton value="Registrarse" onclick="location.href='usuario/registro.xhtml'" 
 							style="width:700px; height:100px; font-size:50px" />
 						<br /> <br /> <br />
-						<p:commandButton value="Iniciar Seción" action="#"
+						<p:commandButton value="Iniciar Sesión" action="#"
 							style="width:700px; height:100px; font-size:50px" />
 					</div>
 				</p:panel>
 			</h:form>
 		</h:panelGrid>
-		<f:facet name="fount">
-			<p:panel style="border:rgb(128,128,128) 3px solid;">
-				<div align="center">
-					<p:commandButton value="Registrarse" action="#"
-						style="width:700px; height:100px; font-size:50px" />
-					<p:commandButton value="Iniciar Seción" action="#"
-						style="width:700px; height:100px; font-size:50px" />
-				</div>
-			</p:panel>
-		</f:facet>
+<!-- 		<f:facet name="fount"> -->
+<!-- 			<p:panel style="border:rgb(128,128,128) 3px solid;bgcolor:blue;"> -->
+<!-- 				<div align="center"> -->
+<!-- 					<p:commandButton onclick="location.href='usuario/registro.xhtml'" -->
+<!-- 						value="Registrarse" style="width:700px; height:100px; font-size:50px"/> -->
+<!-- 					<p:commandButton value="Iniciar Sesión" action="#" -->
+<!-- 						style="width:700px; height:100px; font-size:50px" /> -->
+<!-- 				</div> -->
+<!-- 			</p:panel> -->
+<!-- 		</f:facet> -->
 		<h:form id="pie-pagina">
-			<p:panel style="border:rgb(128,128,128) 3px solid;background-color:#F7B00B;color:blue;">
+			<p:panel
+				style="border:rgb(128,128,128) 3px solid;bgcolor:red;">
 				<div align="center">
 					<h1>Contactenos:</h1>
 				</div>
-				<table>
+				<table border="1px" width="1865" bgcolor="#BD9C42">
 					<tr>
 						<th>Nombres</th>
 						<th>Correo</th>
@@ -161,40 +179,25 @@
 					<tr>
 						<td>Diana Rosero</td>
 						<td>rcroseror@utn.edu.ec</td>
+						<td>0999288030</td>
 					</tr>
 					<tr>
 						<td>Tommy Mancero</td>
 						<td>tbmancerom@utn.edu.ec</td>
+						<td>0994658706</td>
 					</tr>
 					<tr>
-						<td>Diana Rosero</td>
-						<td>rcroseror@utn.edu.ec</td>
+						<td>Stalyn Tua</td>
+						<td>wstuas@utn.edu.ec</td>
+						<td>0958956659</td>
 					</tr>
 					<tr>
-						<td>Diana Rosero</td>
-						<td>rcroseror@utn.edu.ec</td>
+						<td>Abraham Vallejos</td>
+						<td>ajvallejosm@utn.edu.ec</td>
+						<td>0993114389</td>
 					</tr>
-					<p:column>
-						<h1>Nombres</h1>
-						<h:outputText value="Diana Rosero" />
-						<br/>
-						<h:outputText value="Tommy Mancero" />
-						<br/>
-						<h:outputText value="Stalyn Tua" />
-						<br/>
-						<h:outputText value="Abraham Vallejos" />
-					</p:column>
-					<p:column>
-						<h1>Correo</h1>
-						<h:outputText value="dcroseror@utn.edu.ec" />
-						<br/>
-						<h:outputText value="tbmancerom@utn.edu.ec" />
-						<br/>
-						<h:outputText value="wstuas@utn.edu.ec" />
-						<br/>
-						<h:outputText value="ajvallejosm@utn.edu.ec" />
-					</p:column>
 				</table>
+
 			</p:panel>
 		</h:form>
 	</h:form>
