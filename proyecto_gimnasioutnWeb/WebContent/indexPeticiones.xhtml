@@ -34,15 +34,54 @@
 				<h:outputText value="Id" />
 				<p:inputText value="#{beanPeticiones.peticion.ptcId}" />
 				
-				<h:outputText value="Hora Inicio" />
-				<p:inputText value="#{beanPeticiones.peticion.ptcHoraInicio}" />
+<!-- 				<h:outputText value="Hora Inicio" /> -->
+<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcHoraInicio}" /> -->
+				<p:selectOneMenu  value="#{beanPeticiones.peticion.ptcHoraInicio}"
+					style="width:125px">
+					<f:selectItem itemLabel="Hora inicio" itemValue="" />
+					<f:selectItem itemLabel="7:00" itemValue="7:00" />
+					<f:selectItem itemLabel="8:00" itemValue="8:00" />
+					<f:selectItem itemLabel="9:00" itemValue="9:00" />
+					<f:selectItem itemLabel="10:00" itemValue="10:00" />
+					<f:selectItem itemLabel="11:00" itemValue="11:00" />
+					<f:selectItem itemLabel="12:00" itemValue="12:00" />
+					<f:selectItem itemLabel="13:00" itemValue="13:00" />
+					<f:selectItem itemLabel="14:00" itemValue="14:00" />
+					<f:selectItem itemLabel="15:00" itemValue="15:00" />
+					<f:selectItem itemLabel="16:00" itemValue="16:00" />
+					<f:selectItem itemLabel="17:00" itemValue="17:00" />
+					<f:selectItem itemLabel="18:00" itemValue="18:00" />
+					<f:selectItem itemLabel="19:00" itemValue="19:00" />
+					<f:selectItem itemLabel="20:00" itemValue="20:00" />
+				</p:selectOneMenu>
+
+<!-- 				<h:outputText value="Hora Fin" /> -->
+<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcHoraFin}" /> -->
+				<p:selectOneMenu  value="#{beanPeticiones.peticion.ptcHoraFin}"
+					style="width:125px">
+					<f:selectItem itemLabel="Hora inicio" itemValue="" />
+					<f:selectItem itemLabel="7:00" itemValue="7:00" />
+					<f:selectItem itemLabel="8:00" itemValue="8:00" />
+					<f:selectItem itemLabel="9:00" itemValue="9:00" />
+					<f:selectItem itemLabel="10:00" itemValue="10:00" />
+					<f:selectItem itemLabel="11:00" itemValue="11:00" />
+					<f:selectItem itemLabel="12:00" itemValue="12:00" />
+					<f:selectItem itemLabel="13:00" itemValue="13:00" />
+					<f:selectItem itemLabel="14:00" itemValue="14:00" />
+					<f:selectItem itemLabel="15:00" itemValue="15:00" />
+					<f:selectItem itemLabel="16:00" itemValue="16:00" />
+					<f:selectItem itemLabel="17:00" itemValue="17:00" />
+					<f:selectItem itemLabel="18:00" itemValue="18:00" />
+					<f:selectItem itemLabel="19:00" itemValue="19:00" />
+				</p:selectOneMenu>
 				
-				<h:outputText value="Hora Fin" />
-				<p:inputText value="#{beanPeticiones.peticion.ptcHoraFin}" />
-				
-				<h:outputText value="Fecha" />
-				<p:inputText value="#{beanPeticiones.peticion.ptcFecha}" />
-				
+<!-- 				<h:outputText value="Fecha" /> -->
+<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcFecha}" /> -->
+				<p:outputLabel for="button" value="Fecha:" />
+        		<p:calendar id="button" value="#{beanPeticiones.peticion.ptcFecha}" showOn="button" >
+        			 <f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Quito_City" />
+        		</p:calendar>	
+				 
 				<h:outputText value="Tipo" />
 				<p:inputText value="#{beanPeticiones.peticion.tpIdTipoPeticion}" />
 				

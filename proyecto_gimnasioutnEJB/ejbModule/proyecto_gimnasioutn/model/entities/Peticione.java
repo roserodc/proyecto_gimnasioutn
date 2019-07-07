@@ -2,8 +2,6 @@ package proyecto_gimnasioutn.model.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.sql.Time;
-import java.util.Date;
 
 
 /**
@@ -26,15 +24,14 @@ public class Peticione implements Serializable {
 	@Column(name="ge_id_guia_entrenamiento")
 	private Integer geIdGuiaEntrenamiento;
 
-	@Temporal(TemporalType.DATE)
-	@Column(name="ptc_fecha")
-	private Date ptcFecha;
+	@Column(name="ptc_fecha", length=2147483647)
+	private String ptcFecha;
 
-	@Column(name="ptc_hora_fin")
-	private Time ptcHoraFin;
+	@Column(name="ptc_hora_fin", length=2147483647)
+	private String ptcHoraFin;
 
-	@Column(name="ptc_hora_inicio")
-	private Time ptcHoraInicio;
+	@Column(name="ptc_hora_inicio", length=2147483647)
+	private String ptcHoraInicio;
 
 	@Column(name="tp_id_tipo_peticion")
 	private Integer tpIdTipoPeticion;
@@ -69,27 +66,27 @@ public class Peticione implements Serializable {
 		this.geIdGuiaEntrenamiento = geIdGuiaEntrenamiento;
 	}
 
-	public Date getPtcFecha() {
+	public String getPtcFecha() {
 		return this.ptcFecha;
 	}
 
-	public void setPtcFecha(Date ptcFecha) {
+	public void setPtcFecha(String ptcFecha) {
 		this.ptcFecha = ptcFecha;
 	}
 
-	public Time getPtcHoraFin() {
+	public String getPtcHoraFin() {
 		return this.ptcHoraFin;
 	}
 
-	public void setPtcHoraFin(Time ptcHoraFin) {
+	public void setPtcHoraFin(String ptcHoraFin) {
 		this.ptcHoraFin = ptcHoraFin;
 	}
 
-	public Time getPtcHoraInicio() {
+	public String getPtcHoraInicio() {
 		return this.ptcHoraInicio;
 	}
 
-	public void setPtcHoraInicio(Time ptcHoraInicio) {
+	public void setPtcHoraInicio(String ptcHoraInicio) {
 		this.ptcHoraInicio = ptcHoraInicio;
 	}
 
