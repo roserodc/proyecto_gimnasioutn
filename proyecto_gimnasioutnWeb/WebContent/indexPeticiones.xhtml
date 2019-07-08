@@ -34,8 +34,8 @@
 				<h:outputText value="Id" />
 				<p:inputText value="#{beanPeticiones.peticion.ptcId}" />
 				
-<!-- 				<h:outputText value="Hora Inicio" /> -->
-<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcHoraInicio}" /> -->
+
+				<h:outputText value="Hora Inicio" />
 				<p:selectOneMenu  value="#{beanPeticiones.peticion.ptcHoraInicio}"
 					style="width:125px">
 					<f:selectItem itemLabel="Hora inicio" itemValue="" />
@@ -55,8 +55,7 @@
 					<f:selectItem itemLabel="20:00" itemValue="20:00" />
 				</p:selectOneMenu>
 
-<!-- 				<h:outputText value="Hora Fin" /> -->
-<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcHoraFin}" /> -->
+				<h:outputText value="Hora Fin" />
 				<p:selectOneMenu  value="#{beanPeticiones.peticion.ptcHoraFin}"
 					style="width:125px">
 					<f:selectItem itemLabel="Hora inicio" itemValue="" />
@@ -75,15 +74,20 @@
 					<f:selectItem itemLabel="19:00" itemValue="19:00" />
 				</p:selectOneMenu>
 				
-<!-- 				<h:outputText value="Fecha" /> -->
-<!-- 				<p:inputText value="#{beanPeticiones.peticion.ptcFecha}" /> -->
-				<p:outputLabel for="button" value="Fecha:" />
+
+				<h:outputLabel for="button" value="Fecha:" />
         		<p:calendar id="button" value="#{beanPeticiones.peticion.ptcFecha}" showOn="button" >
         			 <f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Quito_City" />
         		</p:calendar>	
 				 
-				<h:outputText value="Tipo" />
-				<p:inputText value="#{beanPeticiones.peticion.tpIdTipoPeticion}" />
+				<h:outputText value="Tipo Peticion" />
+				<p:selectOneMenu value="#{beanPeticion.peticion.tpIdTipoPeticion}">
+					<f:selectItem noSelectionOption="true"
+						itemLabel="Seleccione Tipo Peticion" itemValue="#{null}" />
+					<f:selectItems value="#{beanTipoPeticion.listaTipoPeticion}"
+						var="tipop" itemLabel="#{tipop.tpDescripcion}"
+						itemValue="#{tipop.tpId.toString()}" />
+				</p:selectOneMenu>
 				
 				<h:outputText value="Estado" />
 				<p:inputText value="#{beanPeticiones.peticion.estIdEstados}" />
