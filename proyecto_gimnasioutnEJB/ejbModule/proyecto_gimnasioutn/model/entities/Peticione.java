@@ -1,6 +1,8 @@
 package proyecto_gimnasioutn.model.entities;
 
 import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.*;
 
 
@@ -24,6 +26,7 @@ public class Peticione implements Serializable {
 	@Column(name="ge_id_guia_entrenamiento")
 	private Integer geIdGuiaEntrenamiento;
 
+	
 	@Column(name="ptc_fecha", length=2147483647)
 	private String ptcFecha;
 

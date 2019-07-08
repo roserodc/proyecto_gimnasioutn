@@ -29,7 +29,7 @@ public class ManagerRutina {
 	}
 
 	public List<Rutina> findAllRutinas() {
-		String consulta = "select o from Rutina o order by rtDescripcion";
+		String consulta = "select o from Rutina o order by rtId";
 		Query q = en.createQuery(consulta, Rutina.class);
 		return q.getResultList();
 	}

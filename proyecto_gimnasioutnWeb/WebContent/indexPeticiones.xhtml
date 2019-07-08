@@ -18,6 +18,7 @@
 		<p:autoUpdate />
 	</p:growl>
 
+
 <h:form id="form1">
 		<p:messages>
 			<p:autoUpdate />
@@ -77,8 +78,9 @@
 
 				<h:outputLabel for="button" value="Fecha:" />
         		<p:calendar id="button" value="#{beanPeticiones.peticion.ptcFecha}" showOn="button" >
-        			 <f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Quito_City" />
+        			 <f:convertDateTime pattern="dd/MM/yyyy" timeZone="America/Quito_City"  />
         		</p:calendar>	
+				 
 				 
 				<h:outputText value="Tipo Peticion" />
 				<p:selectOneMenu value="#{beanPeticiones.peticion.tpIdTipoPeticion}">
