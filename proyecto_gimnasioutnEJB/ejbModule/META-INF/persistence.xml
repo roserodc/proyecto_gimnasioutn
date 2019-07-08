@@ -11,5 +11,8 @@
 		<class>proyecto_gimnasioutn.model.entities.TipoPeticion</class>
 		<class>proyecto_gimnasioutn.model.entities.Nivel</class>
 		<class>proyecto_gimnasioutn.model.entities.Peticione</class>
+		<class>proyecto_gimnasioutn.model.entities.GuiaEntrenamiento</class>
+		<class>proyecto_gimnasioutn.model.entities.Rutina</class>
+		<class>proyecto_gimnasioutn.model.entities.Plan</class>
 	</persistence-unit>
 </persistence>

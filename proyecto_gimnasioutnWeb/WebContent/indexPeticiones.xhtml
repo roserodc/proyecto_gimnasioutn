@@ -90,10 +90,24 @@
 				</p:selectOneMenu>
 				
 				<h:outputText value="Estado" />
-				<p:inputText value="#{beanPeticiones.peticion.estIdEstados}" />
+				<p:selectOneMenu value="#{beanPeticiones.peticion.estIdEstados}">
+					<f:selectItem noSelectionOption="true"
+						itemLabel="Seleccione Estado" itemValue="#{null}" />
+					<f:selectItems value="#{beanEstado.listaEstado}" var="estado"
+						itemLabel="#{estado.estDescripcion}"
+						itemValue="#{estado.estId.toString()}" />
+				</p:selectOneMenu>
 				
-				<h:outputText value="Guia de entrenamiento" />
-				<p:inputText value="#{beanPeticiones.peticion.geIdGuiaEntrenamiento}" />
+				<h:outputText value="Guia Entrenamiento" />
+				<p:selectOneMenu
+					value="#{beanPeticiones.peticion.geIdGuiaEntrenamiento}">
+					<f:selectItem noSelectionOption="true"
+						itemLabel="Seleccione Entrenamiento" itemValue="#{null}" />
+					<f:selectItems
+						value="#{beanGuiaEntrenamiento.listaGuiaEntrenamiento}"
+						var="guiaEntren" itemLabel="#{guiaEntren.geDescripcion}"
+						itemValue="#{guiaEntren.geId.toString()}" />
+				</p:selectOneMenu>
 
 				
 
